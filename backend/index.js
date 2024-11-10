@@ -238,6 +238,29 @@ app.get('/api/instructor/courses', authenticateToken, (req, res) => {
 });
 
 
+//coureId enrolled by students:
+app.get('/api/courses/:id/students', (req, res) => {
+  const courseId = req.params.id;
+
+  const query = `
+      SELECT Users.id, Users.email
+      FROM Enrollments
+      JOIN Students ON Enrollments.student_id = Students.id
+      JOIN Users ON Students.user_id = Users.id
+      WHERE Enrollments.course_id = ?
+  `;
+
+  db.query(query, [courseId], (err, results) => {
+      if (err) {
+          console.error("Error fetching enrolled students:", err);
+          return res.status(500).json({ message: "Error fetching enrolled students" });
+      }
+
+      res.status(200).json(results);
+  });
+});
+
+
 
 
 app.get('/api/marks', (req, res) => {
