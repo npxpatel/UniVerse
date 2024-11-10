@@ -1,0 +1,9 @@
+name = "backend"
+compatibility_date = "2023-12-01"
+
+[vars]
+
+
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNDJlNTFiYWYtYWI0NS00NjkwLWI0MTItODQ2OTNkYTk5NTcxIiwidGVuYW50X2lkIjoiZDcyMWYxMTg4YWUyMGU4ODVkZTJkMDkwZTdjNzlmNmVlNzdhZDg0MzNiNDI3YTczOGQ3NzZlOGE1Zjk1M2I0YyIsImludGVybmFsX3NlY3JldCI6IjBkMmI5ZDQyLWMzZmQtNDFlMC1iNzU2LTVmY2RmOTlmZDAyYyJ9.igyYG4iiSeg0-_s1E9pxWRaLhI_lHqpxIUgihXjnv4I"
+
+JWT_SECRET = "patelTel"
